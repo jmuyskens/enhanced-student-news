@@ -1,0 +1,27 @@
+<script type="text/ng-template" data-spy="scroll" data-target=".bs-docs-sidenav">
+    <div class="row">
+        <div class="col-md-3">
+
+            <div class="bs-docs-sidebar affix">
+                <img id="logo" src="images/logo_maroon.png" alt=""/>
+                <h1>Enhanced Student News</h1>
+
+
+                <ul class="nav bs-docs-sidenav">
+                    <li ng-repeat="new in news">
+
+                        <a href="#news{{$index}}">{{new.title}}</a>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-6">
+
+            <div id="#news{{$index}}" class="bs-docs-section news-item" ng-repeat="new in news">
+                <h2>{{new.title}}</h2>
+                <p>{{new.body}}</p>
+            </div>
+        </div>
+    </div>
+</script>
